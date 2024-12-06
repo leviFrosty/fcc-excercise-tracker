@@ -19,9 +19,9 @@ bun install
 Generate local DB environment
 
 ```bash
-bun db:generate
-
 bun db:push
+
+bun db:generate
 ```
 
 Run API:
