@@ -1,15 +1,37 @@
-# fcc-exercise-tracker
+# [fcc-exercise-tracker](https://www.freecodecamp.org/learn/back-end-development-and-apis/back-end-development-and-apis-projects/exercise-tracker)
 
-To install dependencies:
+Personal project for practicing REST API & SQLite DB design.
+
+## Setup
+
+Copy environment variables
+
+```bash
+cp .env.example .env
+```
+
+Install dependencies:
 
 ```bash
 bun install
 ```
 
-To run:
+Generate local DB environment
+
+```bash
+bun db:generate
+
+bun db:push
+```
+
+Run api:
 
 ```bash
 bun dev
 ```
 
-This project was created using `bun init` in bun v1.1.33. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+Run Drizzle Studio (DB viewing):
+
+```bash
+bun db:dev
+```
