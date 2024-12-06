@@ -24,13 +24,13 @@ bun db:generate
 bun db:push
 ```
 
-Run api:
+Run API:
 
 ```bash
 bun dev
 ```
 
-Run Drizzle Studio (DB viewing):
+Run Drizzle Studio (view DB):
 
 ```bash
 bun db:dev
