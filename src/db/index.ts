@@ -8,6 +8,7 @@ if (!url) {
 }
 
 const sqlite = new Database(url);
+sqlite.run(`PRAGMA foreign_keys = ON`);
 const db = drizzle(sqlite, { schema, casing: "snake_case" });
 
 export default db;

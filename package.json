@@ -3,15 +3,17 @@
   "module": "src/index.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun run --watch src/index.ts",
-    "db:generate": "drizzle-kit generate",
+    "dev": "bun run --hot src/index.ts",
+    "build": "bun build src/index.ts --outdir build/ --target=bun",
     "db:push": "drizzle-kit push",
+    "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:dev": "drizzle-kit studio",
     "clean": "git clean -xdf"
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "better-sqlite3": "^11.6.0",
     "drizzle-kit": "^0.29.1"
   },
   "peerDependencies": {
@@ -19,7 +21,6 @@
   },
   "dependencies": {
     "@hono/zod-validator": "^0.4.1",
-    "better-sqlite3": "^11.6.0",
     "drizzle-orm": "^0.37.0",
     "hono": "^4.6.13",
     "zod": "^3.23.8"
